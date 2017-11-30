@@ -1,0 +1,3 @@
+rootProject.name = 'NetFlix'
+
+include ':app'
