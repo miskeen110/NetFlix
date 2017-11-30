@@ -33,6 +33,7 @@ export default class List extends Component {
         <View style={styles.wrapper}>
         <Text>Hello World!!!</Text>
           <FlatList
+          horizontal
             onRefresh={() => this.onRefresh()}
             refreshing={this.state.isFetching}
             data={this.state.stories}
