@@ -27,19 +27,46 @@ export default class List extends Component {
   _renderItem = ({item}) => (
      <Image style={{width:120, height:180}} source={{uri:item.url}}/>
   )
+
+  renderSeparator = () => {
+    return (
+      <View
+        style={{
+          width: 5
+        }}
+      />
+    );
+  }
+
   render() {
     return (
       
         <View style={styles.wrapper}>
+        <View>
         <Text>Hello World!!!</Text>
           <FlatList
-          horizontal
+            horizontal
+            ItemSeparatorComponent={this.renderSeparator}
             onRefresh={() => this.onRefresh()}
             refreshing={this.state.isFetching}
             data={this.state.stories}
             keyExtractor={(item) => item.id}
             renderItem={this._renderItem}
           />
+          </View>
+          <View>
+          <Text>Hello World!!!</Text>
+          <FlatList
+            horizontal
+            ItemSeparatorComponent={this.renderSeparator}
+            onRefresh={() => this.onRefresh()}
+            refreshing={this.state.isFetching}
+            data={this.state.stories}
+            keyExtractor={(item) => item.id}
+            renderItem={this._renderItem}
+          />
+          </View>
+
         </View>
       
     );
