@@ -21,7 +21,7 @@ export default class List extends Component {
   }
   fetchData() {
     alert('test');
-    const newList = [{id: 1, text: 'a',url:'https://www.w3schools.com/images/w3schools_green.jpg'}, {id: 2, text: 'b',url:'https://www.w3schools.com/images/w3schools_green.jpg'}, {id: 3, text: 'c',url:'https://www.w3schools.com/images/w3schools_green.jpg'}]
+    const newList = [{id: 1, text: 'a',url:'https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwNDcyNzkyOV5BMl5BanBnXkFtZTgwNzI1NzkyNzE@._V1_SY1000_CR0,0,674,1000_AL_.jpg'}, {id: 2, text: 'b',url:'https://images-na.ssl-images-amazon.com/images/M/MV5BNjY3Mjg0OTc1OF5BMl5BanBnXkFtZTgwNDU0MzAyNDM@._V1_.jpg'},{id: 3, text: 'c',url:'https://images-na.ssl-images-amazon.com/images/M/MV5BNjY3Mjg0OTc1OF5BMl5BanBnXkFtZTgwNDU0MzAyNDM@._V1_.jpg'}]
     this.setState({ stories: newList, isFetching: false });
   }
   _renderItem = ({item}) => (
